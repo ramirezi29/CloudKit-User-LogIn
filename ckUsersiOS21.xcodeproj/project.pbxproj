@@ -12,6 +12,12 @@
 		47943079215BE43D009F6114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47943077215BE43D009F6114 /* Main.storyboard */; };
 		4794307B215BE43F009F6114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4794307A215BE43F009F6114 /* Assets.xcassets */; };
 		4794307E215BE43F009F6114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4794307C215BE43F009F6114 /* LaunchScreen.storyboard */; };
+		47943088215BE44B009F6114 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47943087215BE44B009F6114 /* CloudKit.framework */; };
+		4794308F215BE70F009F6114 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4794308E215BE70F009F6114 /* User.swift */; };
+		47943091215BEF39009F6114 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47943090215BEF39009F6114 /* UserController.swift */; };
+		47943093215BFF01009F6114 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47943092215BFF01009F6114 /* WelcomeViewController.swift */; };
+		47943095215BFF0A009F6114 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47943094215BFF0A009F6114 /* LogInViewController.swift */; };
+		47943097215C0159009F6114 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47943096215C0159009F6114 /* UIViewController+Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,13 @@
 		4794307A215BE43F009F6114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4794307D215BE43F009F6114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4794307F215BE43F009F6114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47943085215BE449009F6114 /* ckUsersiOS21.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ckUsersiOS21.entitlements; sourceTree = "<group>"; };
+		47943087215BE44B009F6114 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		4794308E215BE70F009F6114 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		47943090215BEF39009F6114 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		47943092215BFF01009F6114 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		47943094215BFF0A009F6114 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		47943096215C0159009F6114 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47943088215BE44B009F6114 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,7 @@
 			children = (
 				47943072215BE43D009F6114 /* ckUsersiOS21 */,
 				47943071215BE43D009F6114 /* Products */,
+				47943086215BE44B009F6114 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,76 @@
 		47943072215BE43D009F6114 /* ckUsersiOS21 */ = {
 			isa = PBXGroup;
 			children = (
-				47943073215BE43D009F6114 /* AppDelegate.swift */,
-				47943075215BE43D009F6114 /* ViewController.swift */,
+				4794308D215BE48E009F6114 /* SupportingFiles */,
+				47943098215C084F009F6114 /* Resources */,
+				4794308C215BE486009F6114 /* ViewController */,
+				4794308B215BE47F009F6114 /* ModelController */,
+				4794308A215BE478009F6114 /* Model */,
+				47943089215BE472009F6114 /* UI */,
+				47943085215BE449009F6114 /* ckUsersiOS21.entitlements */,
+				47943096215C0159009F6114 /* UIViewController+Alerts.swift */,
+			);
+			path = ckUsersiOS21;
+			sourceTree = "<group>";
+		};
+		47943086215BE44B009F6114 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47943087215BE44B009F6114 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47943089215BE472009F6114 /* UI */ = {
+			isa = PBXGroup;
+			children = (
 				47943077215BE43D009F6114 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4794308A215BE478009F6114 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4794308E215BE70F009F6114 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4794308B215BE47F009F6114 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				47943090215BEF39009F6114 /* UserController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		4794308C215BE486009F6114 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				47943092215BFF01009F6114 /* WelcomeViewController.swift */,
+				47943094215BFF0A009F6114 /* LogInViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4794308D215BE48E009F6114 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				47943075215BE43D009F6114 /* ViewController.swift */,
 				4794307A215BE43F009F6114 /* Assets.xcassets */,
 				4794307C215BE43F009F6114 /* LaunchScreen.storyboard */,
 				4794307F215BE43F009F6114 /* Info.plist */,
 			);
-			path = ckUsersiOS21;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		47943098215C084F009F6114 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47943073215BE43D009F6114 /* AppDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +173,14 @@
 				TargetAttributes = {
 					4794306F215BE43D009F6114 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,7 +221,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				47943076215BE43D009F6114 /* ViewController.swift in Sources */,
+				47943093215BFF01009F6114 /* WelcomeViewController.swift in Sources */,
+				47943095215BFF0A009F6114 /* LogInViewController.swift in Sources */,
 				47943074215BE43D009F6114 /* AppDelegate.swift in Sources */,
+				47943091215BEF39009F6114 /* UserController.swift in Sources */,
+				47943097215C0159009F6114 /* UIViewController+Alerts.swift in Sources */,
+				4794308F215BE70F009F6114 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +372,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ckUsersiOS21/ckUsersiOS21.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7AYJDAX2C;
-				INFOPLIST_FILE = ckUsersiOS21/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ckUsersiOS21/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,9 +391,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ckUsersiOS21/ckUsersiOS21.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7AYJDAX2C;
-				INFOPLIST_FILE = ckUsersiOS21/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ckUsersiOS21/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
